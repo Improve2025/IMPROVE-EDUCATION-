@@ -6,231 +6,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Improve Education</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      line-height: 1.6;
-      color: #333;
-    }
-    /* Navbar */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #2c7a7b;
-      color: white;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav img {
-      height: 45px;
-      max-width: 100%;
-      object-fit: contain;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li {
-      margin-left: 1.5rem;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-    /* Mobile menu */
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-    .menu-toggle span {
-      height: 3px;
-      width: 25px;
-      background: white;
-      margin: 4px 0;
-    }
-    @media (max-width: 768px) {
-      nav ul {
-        display: none;
-        flex-direction: column;
-        background: #2c7a7b;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        padding: 1rem;
-        border-radius: 10px;
-      }
-      nav ul.show {
-        display: flex;
-      }
-      .menu-toggle {
-        display: flex;
-      }
-    }
-
-    /* Hero Section */
-    .hero {
-      background: linear-gradient(rgba(44,122,123,0.8), rgba(44,122,123,0.8)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 5rem 2rem;
-    }
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: auto;
-    }
-    .hero .buttons {
-      margin-top: 2rem;
-    }
-    .hero .buttons a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.8rem 1.5rem;
-      background: #38a169;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    .hero .buttons a:hover {
-      background: #2f855a;
-    }
-
-    /* Sections */
-    section {
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 1.5rem;
-      color: #2c7a7b;
-    }
-
-    /* Services */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-    .service {
-      background: #f9f9f9;
-      padding: 1.5rem;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-    .service:hover {
-      transform: translateY(-5px);
-    }
-
-    /* Contact */
-    .contact {
-      text-align: center;
-    }
-    .contact a {
-      color: #2c7a7b;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
-    /* Footer */
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-
+<body class="bg-gray-50 font-sans">
+  
   <!-- Navbar -->
-  <nav>
-    <img src="logo.png" alt="Improve Education Logo">
-    <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">
-      <span></span>
-      <span></span>
-      <span></span>
+  <nav class="bg-white shadow-md fixed w-full top-0 left-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <!-- Logo + Text -->
+      <a href="#" class="flex items-center space-x-2">
+        <img src="logo.png" alt="Improve Education Logo" class="h-10 w-10 object-contain">
+        <span class="font-bold text-xl text-green-700">Improve Education</span>
+      </a>
+      <!-- Menu -->
+      <div class="space-x-6">
+        <a href="#services" class="text-gray-700 hover:text-green-700 font-medium">Services</a>
+        <a href="#contact" class="text-gray-700 hover:text-green-700 font-medium">Contact</a>
+      </div>
     </div>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <h2>Empowering Learners, Inspiring Educators</h2>
-    <p>At Improve Education, we transform learning with innovative teaching, mentorship, and resources that unlock potential.</p>
-    <div class="buttons">
-      <a href="#services">Our Services</a>
-      <a href="#contact">Contact Us</a>
+  <section class="bg-gradient-to-r from-green-600 to-teal-500 text-white h-screen flex items-center justify-center text-center px-6">
+    <div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">Welcome to Improve Education</h1>
+      <p class="text-lg md:text-2xl mb-6">Empowering learners through knowledge, growth, and opportunity.</p>
+      <a href="#services" class="bg-white text-green-700 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200">Discover Our Services</a>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      Improve Education is dedicated to bridging the gap between learners and quality education.  
-      We believe that with the right support, every student can succeed.  
-      Our team provides tools, training, and guidance that empower both learners and educators.
-    </p>
-  </section>
-
-  <!-- Services -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="service">
-        <h3>Tutoring & Mentorship</h3>
-        <p>Personalized tutoring and mentorship programs tailored to individual learning needs.</p>
-      </div>
-      <div class="service">
-        <h3>Workshops & Training</h3>
-        <p>Hands-on training for teachers and learners to enhance teaching and study strategies.</p>
-      </div>
-      <div class="service">
-        <h3>Learning Resources</h3>
-        <p>A wide range of materials and tools to make education engaging and effective.</p>
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-green-700 mb-12">Our Services</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
+          <h3 class="text-xl font-semibold mb-4">Tutoring</h3>
+          <p>Personalized tutoring to help students excel in their studies.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
+          <h3 class="text-xl font-semibold mb-4">Workshops</h3>
+          <p>Interactive workshops designed to inspire and empower learners.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
+          <h3 class="text-xl font-semibold mb-4">Mentorship</h3>
+          <p>Guidance and mentorship programs to support lifelong learning.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:improve.education@example.com">improve.education@example.com</a></p>
-    <p>Follow us on <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">LinkedIn</a></p>
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-green-700 mb-8">Contact Us</h2>
+      <p class="mb-6">We’d love to hear from you! Reach out for questions, collaborations, or support.</p>
+      <a href="mailto:improve.education@example.com" class="bg-green-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-green-700">Email Us</a>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer>
+  <footer class="bg-green-700 text-white text-center py-6 mt-12">
     <p>&copy; 2025 Improve Education. All rights reserved.</p>
   </footer>
 
