@@ -1,1 +1,2 @@
 At Improve Education,we are dedicated to advancing learning, leadership,and organisational growth.We provide a wide range of professional services tailored to support schools, educators,and institutions in achieving excellence.
+We believe in transforming potential into excellence. we provide tailored solutions in research, coaching, counseling, evaluation and consultancy to empower schools, educators,and communities.
